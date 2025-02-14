@@ -1,0 +1,32 @@
+{
+    "pow": {
+      "difficulty": 4,
+      "max_nonce": 4294967295,
+      "block_time_seconds": 600
+    },
+    "pos": {
+      "min_stake": 50.0,
+      "max_stake": 100000.0,
+      "lock_period_seconds": 604800,
+      "reward_weight": 0.3,
+      "validator_selection": "stake_weighted_random",
+      "slashing_penalty_percentage": 5.0
+    },
+    "rewards": {
+      "block_reward": 12.5,
+      "pos_reward_percentage": 30,
+      "pow_reward_percentage": 70,
+      "halving_interval_blocks": 210000
+    },
+    "network": {
+      "max_block_size_kb": 1024,
+      "max_transactions_per_block": 5000,
+      "sync_timeout_seconds": 30
+    },
+    "adjustments": {
+      "difficulty_adjustment_interval_blocks": 2016,
+      "max_difficulty_increase_percentage": 20,
+      "max_difficulty_decrease_percentage": 20
+    }
+  }
+  

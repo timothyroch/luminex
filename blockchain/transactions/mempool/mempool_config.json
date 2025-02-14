@@ -1,0 +1,14 @@
+{
+    "max_transactions": 10000,
+    "max_memory_mb": 50,
+    "min_fee": 0.001,
+    "transaction_expiration_seconds": 3600,
+    "prioritization": "fee_per_byte",
+    "cleanup_interval_seconds": 300,
+    "log_mempool_changes": true,
+    "high_priority_fee_threshold": 0.01,
+    "low_fee_rejection_policy": {
+        "enabled": true,
+        "min_fee_per_byte": 0.0005
+    }
+}

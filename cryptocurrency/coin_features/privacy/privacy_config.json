@@ -1,0 +1,32 @@
+{
+    "privacy": {
+      "enabled": true,
+      "default_privacy_level": "medium",
+      "supported_levels": ["low", "medium", "high"],
+      "zk_snark": {
+        "enabled": true,
+        "circuit_file": "zk_circuit.circom",
+        "proving_key_file": "proving_key.zkey",
+        "verification_key_file": "verification_key.json"
+      },
+      "encryption": {
+        "transaction_data_encryption": true,
+        "encryption_algorithm": "AES-256",
+        "key_rotation_frequency_seconds": 604800
+      }
+    },
+    "fees": {
+      "low_privacy_fee_percentage": 0.01,
+      "medium_privacy_fee_percentage": 0.05,
+      "high_privacy_fee_percentage": 0.1
+    },
+    "logging": {
+      "enable_audit_logs": true,
+      "log_retention_days": 30
+    },
+    "alerts": {
+      "enable_privacy_violation_alerts": true,
+      "alert_email": "admin@privacyblockchain.com"
+    }
+  }
+  

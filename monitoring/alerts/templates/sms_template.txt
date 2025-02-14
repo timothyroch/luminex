@@ -1,0 +1,8 @@
+ALERT: {{ alert_level }} Issue Detected
+
+Metric: {{ metric_name }}
+Current Value: {{ current_value }}
+Threshold: {{ threshold_type }} ({{ threshold_value }})
+
+Take immediate action to resolve this issue.
+- Blockchain Monitoring System

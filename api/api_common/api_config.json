@@ -1,0 +1,56 @@
+{
+    "general_settings": {
+      "api_base_url": "http://127.0.0.1:5000",  
+      "enable_cors": true,                     
+      "cors_allowed_origins": ["*"],           
+      "timeout_seconds": 15                    
+    },
+    "rate_limiting": {
+      "enable_rate_limiting": true,            
+      "rate_limit_per_minute": 100,            
+      "rate_limit_burst": 20                   
+    },
+    "security": {
+      "enable_ssl": true,                      
+      "allowed_http_methods": ["GET", "POST", "PUT", "DELETE"], 
+      "enable_api_key_auth": true,             
+      "allowed_ip_addresses": [                
+        "192.168.1.10",
+        "192.168.1.20",
+        "127.0.0.1"
+      ],
+      "blacklisted_ip_addresses": [            
+        "192.168.1.100"
+      ]
+    },
+    "logging": {
+      "enable_logging": true,                  
+      "log_level": "INFO",                     
+      "log_file_path": "logs/api.log",         
+      "log_retention_days": 30                 
+    },
+    "performance": {
+      "enable_compression": true,              
+      "compression_algorithm": "gzip",         
+      "max_request_size": 1048576              
+    },
+    "alerts": {
+      "enable_alerts": true,                   
+      "email_notifications": true,             
+      "sms_notifications": false,              
+      "alert_recipients": [                    
+        "admin1@blockchain.net",
+        "admin2@blockchain.net"
+      ]
+    },
+    "cache": {
+      "enable_caching": true,                  
+      "cache_timeout_seconds": 300,            
+      "cache_backend": "redis",                
+      "cache_config": {
+        "host": "127.0.0.1",
+        "port": 6379
+      }
+    }
+  }
+  

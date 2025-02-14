@@ -1,0 +1,40 @@
+{
+    "api_settings": {
+      "max_request_size": 1048576,  
+      "timeout_seconds": 15,  
+      "rate_limit_per_minute": 200,  
+      "enable_cors": true,  
+      "cors_allowed_origins": ["*"]  
+    },
+    "cache": {
+      "enable_cache": true,  
+      "cache_expiry_seconds": 300,  
+      "cache_backend": "redis",  
+      "max_cache_size": 104857600  
+    },
+    "pagination": {
+      "default_page_size": 10,  
+      "max_page_size": 100,  
+      "enable_pagination": true  
+    },
+    "security": {
+      "enable_api_key_auth": true,  
+      "allowed_ip_addresses": [  
+        "192.168.1.10",
+        "192.168.1.11",
+        "127.0.0.1"
+      ],
+      "enable_ssl": true  
+    },
+    "logging": {
+      "enable_logging": true,  
+      "log_level": "INFO",  
+      "log_file_path": "logs/explorer_api.log",  
+      "log_retention_days": 30  
+    },
+    "optimization": {
+      "enable_compression": true,  
+      "compression_algorithm": "gzip"  
+    }
+  }
+  

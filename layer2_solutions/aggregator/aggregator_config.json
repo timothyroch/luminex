@@ -1,0 +1,32 @@
+{
+    "aggregator": {
+      "batch_size": 100,
+      "batch_timeout_seconds": 60,
+      "max_pending_batches": 10,
+      "enable_auto_batching": true
+    },
+    "proof_submission": {
+      "retry_interval_seconds": 30,
+      "max_retries": 5,
+      "enable_verification": true
+    },
+    "state_sync": {
+      "sync_interval_seconds": 300,
+      "enable_auto_sync": true
+    },
+    "logging": {
+      "enable_logs": true,
+      "log_level": "INFO",
+      "log_retention_days": 14
+    },
+    "optimization": {
+      "enable_compression": true,
+      "compression_algorithm": "gzip",
+      "max_compression_ratio": 0.8
+    },
+    "security": {
+      "enable_proof_validation": true,
+      "max_dispute_period_seconds": 86400
+    }
+  }
+  

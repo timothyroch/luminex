@@ -1,0 +1,19 @@
+{
+    "consensus_type": "Proof of Stake",
+    "block_time_seconds": 10,
+    "minimum_stake": 1000,
+    "slashing_penalty": 0.05,
+    "finalization_threshold": 0.67,
+    "max_validator_count": 100,
+    "reward_per_block": 2,
+    "unbonding_period": 86400,
+    "max_votes_per_block": 50,
+    "block_size_limit": 1048576,
+    "fork_resolution_policy": "longest_chain",
+    "malicious_behavior_detection": {
+        "double_signing": true,
+        "downtime_threshold_seconds": 300
+    },
+    "validator_rotation_policy": "round_robin",
+    "precommit_timeout_seconds": 5
+}

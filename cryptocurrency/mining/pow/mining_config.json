@@ -1,0 +1,26 @@
+{
+    "mining": {
+      "algorithm": "SHA-256",
+      "difficulty": 4,
+      "target_block_time_seconds": 600,
+      "block_reward": 12.5,
+      "halving_interval_blocks": 210000,
+      "max_nonce": 4294967295
+    },
+    "network": {
+      "max_block_size_kb": 1024,
+      "max_transaction_per_block": 5000,
+      "node_sync_timeout_seconds": 30
+    },
+    "rewards": {
+      "miner_reward_percentage": 100,
+      "validator_reward_percentage": 0,
+      "transaction_fee_included": true
+    },
+    "adjustments": {
+      "difficulty_adjustment_interval_blocks": 2016,
+      "max_difficulty_increase_percentage": 25,
+      "max_difficulty_decrease_percentage": 20
+    }
+  }
+  

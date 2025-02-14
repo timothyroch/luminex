@@ -1,0 +1,43 @@
+{
+    "thresholds": {
+        "cpu_usage": {
+            "warning": 75,
+            "critical": 90
+        },
+        "memory_usage": {
+            "warning": 70,
+            "critical": 85
+        },
+        "disk_space": {
+            "warning_gb": 10,
+            "critical_gb": 5
+        },
+        "network_latency": {
+            "warning_ms": 100,
+            "critical_ms": 300
+        },
+        "transaction_processing_time": {
+            "warning_ms": 500,
+            "critical_ms": 1000
+        },
+        "node_uptime": {
+            "warning_minutes": 5,
+            "critical_minutes": 10
+        }
+    },
+    "monitoring_interval_seconds": 60,
+    "email": {
+        "enabled": true,
+        "recipients": ["admin@example.com", "support@example.com"],
+        "smtp_server": "smtp.example.com",
+        "port": 587,
+        "username": "monitoring@example.com",
+        "password": "securepassword"
+    },
+    "sms": {
+        "enabled": true,
+        "recipients": ["+1234567890", "+0987654321"],
+        "gateway_url": "https://sms-gateway.example.com/send",
+        "api_key": "your_api_key"
+    }
+}

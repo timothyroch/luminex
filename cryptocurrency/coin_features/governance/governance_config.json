@@ -1,0 +1,30 @@
+{
+    "voting": {
+      "voting_duration_seconds": 604800,
+      "quorum_percentage": 20,
+      "minimum_stake_for_voting": 50.0
+    },
+    "proposal": {
+      "min_deposit": 100.0,
+      "submission_fee": 10.0,
+      "deposit_refund_time_seconds": 86400,
+      "max_proposal_title_length": 100,
+      "max_proposal_description_length": 1000
+    },
+    "statuses": {
+      "approved_threshold_percentage": 51.0,
+      "rejected_threshold_percentage": 49.0,
+      "pending_status_duration_seconds": 259200
+    },
+    "penalties": {
+      "double_voting_penalty_percentage": 25.0,
+      "proposal_spam_penalty_percentage": 10.0
+    },
+    "notifications": {
+      "enable_email_notifications": true,
+      "email_template": "proposal_update_email.html",
+      "enable_sms_notifications": false,
+      "sms_template": "proposal_update_sms.txt"
+    }
+  }
+  

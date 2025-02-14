@@ -1,0 +1,48 @@
+{
+    "api_settings": {
+      "max_request_size": 1048576,  
+      "timeout_seconds": 10,        
+      "rate_limit_per_minute": 150, 
+      "enable_cors": true,          
+      "cors_allowed_origins": ["*"] 
+    },
+    "health_check_intervals": {
+      "node_status_check_interval": 30,  
+      "block_sync_check_interval": 60,   
+      "network_health_check_interval": 120 
+    },
+    "thresholds": {
+      "max_cpu_usage_percent": 85,     
+      "max_memory_usage_mb": 1024,     
+      "max_disk_usage_percent": 90,    
+      "block_sync_lag_threshold": 5,   
+      "max_latency_ms": 200            
+    },
+    "logging": {
+      "enable_logging": true,          
+      "log_level": "INFO",             
+      "log_file_path": "logs/healthcheck_api.log", 
+      "log_retention_days": 14         
+    },
+    "alerts": {
+      "enable_alerts": true,           
+      "email_notifications": true,     
+      "sms_notifications": false,      
+      "alert_recipients": [            
+        "admin1@blockchain.net",
+        "admin2@blockchain.net"
+      ],
+      "alert_thresholds": {            
+        "cpu_usage_percent": 90,
+        "memory_usage_mb": 1500,
+        "disk_usage_percent": 95,
+        "block_sync_lag_blocks": 10,
+        "latency_ms": 300
+      }
+    },
+    "optimization": {
+      "enable_compression": true,      
+      "compression_algorithm": "gzip"  
+    }
+  }
+  

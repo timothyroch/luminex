@@ -1,0 +1,30 @@
+{
+    "initial_supply": 500000000,
+    "maximum_supply": 1000000000,
+    "minting": {
+      "enabled": true,
+      "minting_rate": 5000,
+      "minting_interval_seconds": 600,
+      "authorized_minters": ["address1", "address2"]
+    },
+    "halving": {
+      "enabled": true,
+      "halving_interval_blocks": 210000,
+      "initial_block_reward": 50,
+      "minimum_block_reward": 1
+    },
+    "distribution": {
+      "foundation_percentage": 10,
+      "developer_percentage": 5,
+      "community_percentage": 85
+    },
+    "burning": {
+      "enabled": true,
+      "burn_rate_percentage": 0.1
+    },
+    "fees": {
+      "transaction_fee_percentage": 0.02,
+      "fee_burn_percentage": 50
+    }
+  }
+  

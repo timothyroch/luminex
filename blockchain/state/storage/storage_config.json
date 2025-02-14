@@ -1,0 +1,19 @@
+{
+    "database_path": "blockchain/state/storage/state_db",
+    "storage_engine": "LevelDB",
+    "cache_size_mb": 128,
+    "auto_compaction": true,
+    "backup": {
+        "enabled": true,
+        "backup_interval_hours": 24,
+        "backup_path": "blockchain/state/storage/backups"
+    },
+    "restore": {
+        "auto_restore_on_failure": true,
+        "latest_backup_path": "blockchain/state/storage/backups"
+    },
+    "logging": {
+        "enabled": true,
+        "log_file": "blockchain/state/storage/storage.log"
+    }
+}

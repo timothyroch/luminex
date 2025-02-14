@@ -1,0 +1,138 @@
+{
+  "dashboard": {
+    "id": null,
+    "uid": "network-overview",
+    "title": "Network Overview Dashboard",
+    "schemaVersion": 36,
+    "version": 1,
+    "timezone": "browser",
+    "panels": [
+      {
+        "type": "graph",
+        "title": "Total Transactions Per Second (TPS)",
+        "gridPos": { "x": 0, "y": 0, "w": 12, "h": 8 },
+        "targets": [
+          {
+            "expr": "sum(rate(blockchain_transactions_total[1m]))",
+            "legendFormat": "TPS",
+            "interval": "10s"
+          }
+        ],
+        "yaxes": [
+          {
+            "format": "short",
+            "label": "Transactions per Second",
+            "show": true
+          },
+          {
+            "show": false
+          }
+        ],
+        "lines": true,
+        "fill": 1
+      },
+      {
+        "type": "graph",
+        "title": "Network Latency",
+        "gridPos": { "x": 12, "y": 0, "w": 12, "h": 8 },
+        "targets": [
+          {
+            "expr": "blockchain_network_latency_seconds * 1000",
+            "legendFormat": "Latency (ms)",
+            "interval": "10s"
+          }
+        ],
+        "yaxes": [
+          {
+            "format": "ms",
+            "label": "Latency",
+            "show": true
+          },
+          {
+            "show": false
+          }
+        ],
+        "lines": true,
+        "fill": 1
+      },
+      {
+        "type": "graph",
+        "title": "Block Propagation Time",
+        "gridPos": { "x": 0, "y": 8, "w": 12, "h": 8 },
+        "targets": [
+          {
+            "expr": "blockchain_block_propagation_seconds",
+            "legendFormat": "Propagation Time",
+            "interval": "10s"
+          }
+        ],
+        "yaxes": [
+          {
+            "format": "s",
+            "label": "Time (s)",
+            "show": true
+          },
+          {
+            "show": false
+          }
+        ],
+        "lines": true,
+        "fill": 1
+      },
+      {
+        "type": "stat",
+        "title": "Total Nodes Online",
+        "gridPos": { "x": 12, "y": 8, "w": 12, "h": 4 },
+        "targets": [
+          {
+            "expr": "count(up{job='blockchain_nodes'} == 1)",
+            "legendFormat": "Nodes Online"
+          }
+        ],
+        "colorBackground": true,
+        "sparkline": {
+          "show": true,
+          "full": false
+        }
+      },
+      {
+        "type": "table",
+        "title": "Node Uptime",
+        "gridPos": { "x": 12, "y": 12, "w": 12, "h": 8 },
+        "targets": [
+          {
+            "expr": "node_uptime_seconds",
+            "legendFormat": "{{instance}}",
+            "refId": "A"
+          }
+        ],
+        "columns": [
+          { "text": "Instance", "value": "instance" },
+          { "text": "Uptime (s)", "value": "value" }
+        ],
+        "transform": "timeseries_to_rows",
+        "pageSize": 10
+      }
+    ],
+    "templating": {
+      "list": [
+        {
+          "name": "instance",
+          "type": "query",
+          "label": "Instance",
+          "datasource": "Prometheus",
+          "query": "label_values(node_cpu_seconds_total, instance)",
+          "includeAll": true,
+          "multi": true
+        }
+      ]
+    },
+    "time": {
+      "from": "now-1h",
+      "to": "now"
+    },
+    "timepicker": {
+      "refresh_intervals": ["10s", "30s", "1m", "5m", "15m"]
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+    "rollup": {
+      "batch_size": 100,
+      "max_gas_limit": 8000000,
+      "block_interval_seconds": 60,
+      "priority_fee_percentage": 1.5
+    },
+    "fees": {
+      "transaction_fee": 0.0001,
+      "batch_submission_fee": 0.05,
+      "proof_generation_fee": 0.02
+    },
+    "proofs": {
+      "enabled": true,
+      "circuit_file": "zk_rollup_circuit.circom",
+      "proving_key_file": "proving_key.zkey",
+      "verification_key_file": "verification_key.json"
+    },
+    "security": {
+      "fraud_proof_enabled": true,
+      "max_withdrawal_delay_seconds": 604800,
+      "emergency_exit_contract": "0xEmergencyExitContract"
+    },
+    "optimizations": {
+      "compression_enabled": true,
+      "compression_algorithm": "gzip"
+    },
+    "logging": {
+      "enable_rollup_logs": true,
+      "log_retention_days": 30
+    }
+  }
+  

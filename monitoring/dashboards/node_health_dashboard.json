@@ -1,0 +1,122 @@
+{
+    "dashboard": {
+      "id": null,
+      "uid": "node-health",
+      "title": "Node Health Dashboard",
+      "schemaVersion": 36,
+      "version": 1,
+      "timezone": "browser",
+      "panels": [
+        {
+          "type": "graph",
+          "title": "Node CPU Usage",
+          "gridPos": { "x": 0, "y": 0, "w": 12, "h": 8 },
+          "targets": [
+            {
+              "expr": "node_cpu_seconds_total{job='blockchain_nodes'}",
+              "legendFormat": "{{instance}}",
+              "interval": "10s"
+            }
+          ],
+          "yaxes": [
+            {
+              "format": "percent",
+              "label": "CPU Usage",
+              "show": true
+            },
+            {
+              "show": false
+            }
+          ],
+          "lines": true,
+          "fill": 1
+        },
+        {
+          "type": "graph",
+          "title": "Node Memory Usage",
+          "gridPos": { "x": 12, "y": 0, "w": 12, "h": 8 },
+          "targets": [
+            {
+              "expr": "node_memory_MemAvailable_bytes / node_memory_MemTotal_bytes * 100",
+              "legendFormat": "{{instance}}",
+              "interval": "10s"
+            }
+          ],
+          "yaxes": [
+            {
+              "format": "percent",
+              "label": "Memory Usage",
+              "show": true
+            },
+            {
+              "show": false
+            }
+          ],
+          "lines": true,
+          "fill": 1
+        },
+        {
+          "type": "graph",
+          "title": "Node Disk Space Usage",
+          "gridPos": { "x": 0, "y": 8, "w": 12, "h": 8 },
+          "targets": [
+            {
+              "expr": "node_filesystem_usage_bytes / node_filesystem_size_bytes * 100",
+              "legendFormat": "{{instance}}",
+              "interval": "10s"
+            }
+          ],
+          "yaxes": [
+            {
+              "format": "percent",
+              "label": "Disk Usage",
+              "show": true
+            },
+            {
+              "show": false
+            }
+          ],
+          "lines": true,
+          "fill": 1
+        },
+        {
+          "type": "stat",
+          "title": "Node Uptime",
+          "gridPos": { "x": 12, "y": 8, "w": 12, "h": 8 },
+          "targets": [
+            {
+              "expr": "node_uptime_seconds",
+              "legendFormat": "{{instance}}",
+              "refId": "A"
+            }
+          ],
+          "colorBackground": true,
+          "sparkline": {
+            "show": true,
+            "full": false
+          }
+        }
+      ],
+      "templating": {
+        "list": [
+          {
+            "name": "instance",
+            "type": "query",
+            "label": "Instance",
+            "datasource": "Prometheus",
+            "query": "label_values(node_cpu_seconds_total, instance)",
+            "includeAll": true,
+            "multi": true
+          }
+        ]
+      },
+      "time": {
+        "from": "now-1h",
+        "to": "now"
+      },
+      "timepicker": {
+        "refresh_intervals": ["10s", "30s", "1m", "5m", "15m"]
+      }
+    }
+  }
+  

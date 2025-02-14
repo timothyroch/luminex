@@ -1,0 +1,17 @@
+{
+    "index": 0,
+    "timestamp": "2025-01-10T00:00:00Z",
+    "transactions": [
+      {
+        "sender": "genesis_address",
+        "receiver": "genesis_address",
+        "amount": 0,
+        "signature": "genesis_signature_placeholder",
+        "public_key": "genesis_public_key_placeholder"
+      }
+    ],
+    "previous_hash": "0" ,
+    "nonce": 123456,
+    "merkle_root": "0x0000000000000000000000000000000000000000000000000000000000000000"
+  }
+  

@@ -1,0 +1,56 @@
+{
+    "api_settings": {
+      "max_request_size": 1048576,  
+      "timeout_seconds": 10,        
+      "rate_limit_per_minute": 100, 
+      "enable_cors": true,          
+      "cors_allowed_origins": ["*"] 
+    },
+    "access_control": {
+      "enable_api_key_auth": true,    
+      "allowed_ip_addresses": [       
+        "192.168.1.10",
+        "192.168.1.20",
+        "127.0.0.1"
+      ],
+      "blacklisted_ip_addresses": [   
+        "192.168.1.100"
+      ],
+      "admin_roles": [                
+        {
+          "role": "superadmin",
+          "permissions": ["all"]
+        },
+        {
+          "role": "admin",
+          "permissions": ["manage_nodes", "view_logs", "restart_node"]
+        },
+        {
+          "role": "viewer",
+          "permissions": ["view_logs"]
+        }
+      ]
+    },
+    "logging": {
+      "enable_logging": true,         
+      "log_level": "INFO",            
+      "log_file_path": "logs/admin_api.log", 
+      "log_retention_days": 30        
+    },
+    "alerting": {
+      "enable_alerts": true,          
+      "email_alerts": true,           
+      "sms_alerts": false,            
+      "alert_recipients": [           
+        "admin1@blockchain.net",
+        "admin2@blockchain.net"
+      ]
+    },
+    "security": {
+      "enable_ssl": true,             
+      "allowed_methods": ["GET", "POST", "PUT", "DELETE"], 
+      "max_failed_logins": 5,         
+      "lockout_duration_minutes": 15  
+    }
+  }
+  

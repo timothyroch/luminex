@@ -1,0 +1,36 @@
+{
+    "api_settings": {
+      "max_request_size": 1048576,  
+      "timeout_seconds": 10,
+      "rate_limit_per_minute": 100,  
+      "enable_cors": true,
+      "cors_allowed_origins": ["*"]
+    },
+    "security": {
+      "require_signature": true,
+      "allow_unsigned_transactions": false,
+      "enable_ssl": true,
+      "allowed_ip_addresses": [
+        "192.168.1.10",
+        "192.168.1.11",
+        "127.0.0.1"
+      ]
+    },
+    "transaction_validation": {
+      "min_transaction_amount": 0.001,
+      "max_transaction_amount": 1000000.0,
+      "transaction_lifetime_seconds": 3600,  
+      "max_pending_transactions": 5000
+    },
+    "logging": {
+      "enable_logging": true,
+      "log_level": "INFO",
+      "log_file_path": "logs/transaction_api.log",
+      "log_retention_days": 30
+    },
+    "optimization": {
+      "enable_compression": true,
+      "compression_algorithm": "gzip"
+    }
+  }
+  

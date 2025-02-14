@@ -1,0 +1,15 @@
+{
+    "use_congestion_based": true,
+    "static_base_fee": 0.0001,
+    "congestion": {
+      "base_fee": 0.0001,
+      "max_fee": 0.0010,
+      "threshold": 80
+    },
+    "priority_fees": {
+      "low_priority_multiplier": 0.8,
+      "medium_priority_multiplier": 1.0,
+      "high_priority_multiplier": 1.5
+    }
+  }
+  

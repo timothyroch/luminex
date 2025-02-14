@@ -1,0 +1,41 @@
+{
+    "network": {
+      "blockchain_network": "mainnet",
+      "rpc_url": "https://mainnet.rpc.blockchain.com",
+      "testnet_rpc_url": "https://testnet.rpc.blockchain.com",
+      "default_gas_fee": 0.0001,
+      "confirmation_threshold": 6
+    },
+    "security": {
+      "encryption_algorithm": "AES-256",
+      "key_backup_enabled": true,
+      "mnemonic_length": 12,
+      "auto_lock_timeout": 300
+    },
+    "ui": {
+      "theme": "dark",
+      "language": "en",
+      "currency_display": "USD",
+      "enable_notifications": true
+    },
+    "backup": {
+      "backup_location": "backups/",
+      "auto_backup_interval": "daily",
+      "max_backup_files": 10
+    },
+    "transaction": {
+      "default_transaction_fee": 0.00005,
+      "max_transaction_limit": 10000,
+      "min_transaction_limit": 0.0001
+    },
+    "multisig": {
+      "enabled": true,
+      "default_required_signatures": 2
+    },
+    "logging": {
+      "log_level": "INFO",
+      "log_file": "wallet.log",
+      "log_retention_days": 30
+    }
+  }
+  

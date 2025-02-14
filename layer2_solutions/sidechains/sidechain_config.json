@@ -1,0 +1,31 @@
+{
+    "sidechain": {
+      "name": "TestSidechain",
+      "network_id": 12345,
+      "block_time_seconds": 5,
+      "max_gas_limit": 15000000,
+      "consensus_type": "PoA"
+    },
+    "validators": {
+      "max_validators": 21,
+      "min_stake": 1000,
+      "slashing_rules": {
+        "double_signing": "10% stake slashed",
+        "downtime": "5% stake slashed after 1 hour of inactivity"
+      }
+    },
+    "transaction_fees": {
+      "base_fee": 0.0001,
+      "priority_fee_percentage": 1.0
+    },
+    "governance": {
+      "voting_period_seconds": 604800,
+      "proposal_threshold": 100,
+      "vote_threshold_percentage": 51
+    },
+    "logging": {
+      "enable_logs": true,
+      "log_retention_days": 30
+    }
+  }
+  

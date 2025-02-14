@@ -1,0 +1,158 @@
+{
+    "dashboard": {
+      "id": null,
+      "title": "Blockchain Monitoring Dashboard",
+      "uid": "blockchain-dashboard",
+      "version": 1,
+      "schemaVersion": 36,
+      "timezone": "browser",
+      "panels": [
+        {
+          "type": "graph",
+          "title": "Node CPU Usage",
+          "gridPos": { "x": 0, "y": 0, "w": 12, "h": 8 },
+          "targets": [
+            {
+              "expr": "node_cpu_seconds_total{job='blockchain_nodes'}",
+              "legendFormat": "Node {{instance}}",
+              "interval": "10s"
+            }
+          ],
+          "yaxes": [
+            {
+              "format": "percent",
+              "label": "CPU Usage",
+              "logBase": 1,
+              "show": true
+            },
+            {
+              "show": false
+            }
+          ],
+          "lines": true,
+          "fill": 1
+        },
+        {
+          "type": "graph",
+          "title": "Node Memory Usage",
+          "gridPos": { "x": 12, "y": 0, "w": 12, "h": 8 },
+          "targets": [
+            {
+              "expr": "node_memory_MemAvailable_bytes / node_memory_MemTotal_bytes * 100",
+              "legendFormat": "Node {{instance}}",
+              "interval": "10s"
+            }
+          ],
+          "yaxes": [
+            {
+              "format": "percent",
+              "label": "Memory Usage",
+              "logBase": 1,
+              "show": true
+            },
+            {
+              "show": false
+            }
+          ],
+          "lines": true,
+          "fill": 1
+        },
+        {
+          "type": "graph",
+          "title": "Transaction Throughput (TPS)",
+          "gridPos": { "x": 0, "y": 8, "w": 12, "h": 8 },
+          "targets": [
+            {
+              "expr": "rate(blockchain_transactions_total[1m])",
+              "legendFormat": "TPS",
+              "interval": "10s"
+            }
+          ],
+          "yaxes": [
+            {
+              "format": "short",
+              "label": "Transactions per Second",
+              "logBase": 1,
+              "show": true
+            },
+            {
+              "show": false
+            }
+          ],
+          "lines": true,
+          "fill": 1
+        },
+        {
+          "type": "graph",
+          "title": "Network Latency",
+          "gridPos": { "x": 12, "y": 8, "w": 12, "h": 8 },
+          "targets": [
+            {
+              "expr": "blockchain_network_latency_seconds",
+              "legendFormat": "Latency (ms)",
+              "interval": "10s"
+            }
+          ],
+          "yaxes": [
+            {
+              "format": "ms",
+              "label": "Latency",
+              "logBase": 1,
+              "show": true
+            },
+            {
+              "show": false
+            }
+          ],
+          "lines": true,
+          "fill": 1
+        },
+        {
+          "type": "graph",
+          "title": "Block Propagation Time",
+          "gridPos": { "x": 0, "y": 16, "w": 24, "h": 8 },
+          "targets": [
+            {
+              "expr": "blockchain_block_propagation_seconds",
+              "legendFormat": "Propagation Time",
+              "interval": "10s"
+            }
+          ],
+          "yaxes": [
+            {
+              "format": "s",
+              "label": "Time (s)",
+              "logBase": 1,
+              "show": true
+            },
+            {
+              "show": false
+            }
+          ],
+          "lines": true,
+          "fill": 1
+        }
+      ],
+      "templating": {
+        "list": [
+          {
+            "name": "instance",
+            "type": "query",
+            "label": "Instance",
+            "datasource": "Prometheus",
+            "query": "label_values(node_cpu_seconds_total, instance)",
+            "includeAll": true,
+            "multi": true
+          }
+        ]
+      },
+      "time": {
+        "from": "now-1h",
+        "to": "now"
+      },
+      "timepicker": {
+        "refresh_intervals": ["10s", "30s", "1m", "5m", "15m"]
+      }
+    }
+  }
+  

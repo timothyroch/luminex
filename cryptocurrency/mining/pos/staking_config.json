@@ -1,0 +1,37 @@
+{
+    "staking": {
+      "min_stake": 50.0,
+      "max_stake": 100000.0,
+      "lock_period_seconds": 604800,
+      "unstake_grace_period_seconds": 86400,
+      "reward_rate_annual": 0.08,
+      "slashing_penalty_percentage": 5.0
+    },
+    "validators": {
+      "max_validators": 100,
+      "selection_criteria": "stake_weighted_random",
+      "validator_uptime_threshold": 95
+    },
+    "delegation": {
+      "enabled": true,
+      "min_delegate_stake": 10.0,
+      "commission_rate_percentage": 10.0
+    },
+    "penalties": {
+      "double_signing": {
+        "enabled": true,
+        "penalty_percentage": 50.0
+      },
+      "downtime": {
+        "enabled": true,
+        "downtime_threshold_seconds": 3600,
+        "penalty_percentage": 2.0
+      }
+    },
+    "rewards": {
+      "distribution_frequency_seconds": 86400,
+      "reward_pool_cap": 1000000.0,
+      "burn_unused_rewards": false
+    }
+  }
+  

@@ -1,0 +1,31 @@
+{
+    "nodes_directory": "testnet/nodes",
+    "genesis_file": "testnet/genesis.json",
+    "number_of_nodes": 4,
+    "chain_id": 12345,
+    "genesis_timestamp": 1673367600,
+    "genesis_difficulty": "0x400",
+    "genesis_nonce": "0x0000000000000042",
+    "initial_allocations": {
+        "0xAddress1": "1000000000000000000",
+        "0xAddress2": "500000000000000000",
+        "0xAddress3": "200000000000000000"
+    },
+    "base_port": 30303,
+    "rpc_ports": [8545, 8546, 8547, 8548],
+    "network_id": 12345,
+    "block_time": 15,
+    "consensus": {
+        "type": "PoA",
+        "validators": ["0xValidator1", "0xValidator2", "0xValidator3"]
+    },
+    "logging": {
+        "level": "INFO",
+        "log_file": "testnet/logs/testnet.log"
+    },
+    "monitoring": {
+        "enabled": true,
+        "metrics_interval": 10,
+        "healthcheck_interval": 30
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "port": 5000,
+    "max_peers": 50,
+    "min_peers": 10,
+    "seed_nodes": [
+        "node1.example.com:5000",
+        "node2.example.com:5001",
+        "node3.example.com:5002"
+    ],
+    "connection_timeout": 5,
+    "discovery_interval": 30,
+    "heartbeat_interval": 15,
+    "peer_retry_interval": 10,
+    "encryption": {
+        "enabled": true,
+        "protocol": "TLS1.3"
+    },
+    "logging": {
+        "level": "INFO",
+        "log_to_file": true
+    },
+    "rate_limiting": {
+        "enabled": true,
+        "requests_per_second": 100
+    },
+    "message_size_limit": 1048576,
+    "fallback_nodes": [
+        "node4.backup.com:5003",
+        "node5.backup.com:5004"
+    ]
+}

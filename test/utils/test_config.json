@@ -1,0 +1,39 @@
+{
+    "general": {
+        "test_suite_name": "Blockchain Test Suite",
+        "log_level": "DEBUG",
+        "default_timeout": 10,
+        "max_retries": 3
+    },
+    "network": {
+        "rpc_base_url": "http://localhost",
+        "rpc_ports": [8545, 8546, 8547, 8548],
+        "base_p2p_port": 30303,
+        "max_latency_ms": 100
+    },
+    "test_resources": {
+        "mock_data_path": "test/resources/mock_data",
+        "expected_results_path": "test/resources/expected_results",
+        "snapshot_path": "test/resources/snapshots"
+    },
+    "performance": {
+        "max_tps": 1000,
+        "block_propagation_threshold_ms": 200,
+        "api_latency_threshold_ms": 500
+    },
+    "security": {
+        "replay_attack_resilience": true,
+        "double_spending_protection": true,
+        "encryption_algorithm": "SHA-256"
+    },
+    "environment": {
+        "testnet_enabled": true,
+        "number_of_nodes": 4,
+        "testnet_config_path": "testnet/testnet_config.json"
+    },
+    "logging": {
+        "log_file": "test/logs/test_log.log",
+        "max_log_size_mb": 5,
+        "backup_count": 3
+    }
+}

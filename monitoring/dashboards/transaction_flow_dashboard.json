@@ -1,0 +1,121 @@
+{
+    "dashboard": {
+      "id": null,
+      "uid": "transaction-flow",
+      "title": "Transaction Flow Dashboard",
+      "schemaVersion": 36,
+      "version": 1,
+      "timezone": "browser",
+      "panels": [
+        {
+          "type": "graph",
+          "title": "Transactions Per Second (TPS)",
+          "gridPos": { "x": 0, "y": 0, "w": 12, "h": 8 },
+          "targets": [
+            {
+              "expr": "rate(blockchain_transactions_total[1m])",
+              "legendFormat": "TPS",
+              "interval": "10s"
+            }
+          ],
+          "yaxes": [
+            {
+              "format": "short",
+              "label": "Transactions per Second",
+              "show": true
+            },
+            {
+              "show": false
+            }
+          ],
+          "lines": true,
+          "fill": 1
+        },
+        {
+          "type": "graph",
+          "title": "Pending Transactions",
+          "gridPos": { "x": 12, "y": 0, "w": 12, "h": 8 },
+          "targets": [
+            {
+              "expr": "blockchain_pending_transactions",
+              "legendFormat": "Pending Transactions",
+              "interval": "10s"
+            }
+          ],
+          "yaxes": [
+            {
+              "format": "short",
+              "label": "Count",
+              "show": true
+            },
+            {
+              "show": false
+            }
+          ],
+          "lines": true,
+          "fill": 1
+        },
+        {
+          "type": "graph",
+          "title": "Average Transaction Confirmation Time",
+          "gridPos": { "x": 0, "y": 8, "w": 12, "h": 8 },
+          "targets": [
+            {
+              "expr": "blockchain_avg_confirmation_time",
+              "legendFormat": "Avg Confirmation Time (s)",
+              "interval": "10s"
+            }
+          ],
+          "yaxes": [
+            {
+              "format": "s",
+              "label": "Seconds",
+              "show": true
+            },
+            {
+              "show": false
+            }
+          ],
+          "lines": true,
+          "fill": 1
+        },
+        {
+          "type": "stat",
+          "title": "Total Transactions Processed",
+          "gridPos": { "x": 12, "y": 8, "w": 12, "h": 8 },
+          "targets": [
+            {
+              "expr": "blockchain_transactions_total",
+              "legendFormat": "Total Transactions"
+            }
+          ],
+          "colorBackground": true,
+          "sparkline": {
+            "show": true,
+            "full": false
+          }
+        }
+      ],
+      "templating": {
+        "list": [
+          {
+            "name": "instance",
+            "type": "query",
+            "label": "Instance",
+            "datasource": "Prometheus",
+            "query": "label_values(blockchain_transactions_total, instance)",
+            "includeAll": true,
+            "multi": true
+          }
+        ]
+      },
+      "time": {
+        "from": "now-1h",
+        "to": "now"
+      },
+      "timepicker": {
+        "refresh_intervals": ["10s", "30s", "1m", "5m", "15m"]
+      }
+    }
+  }
+  
