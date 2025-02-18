@@ -1,4 +1,3 @@
-Below is an example of a **10/10** folder structure for a next-level crypto project. The structure includes a **scalable, innovative feature**—an **Adaptive Multi-Layer (AML) approach**—that leverages **sharding**, **layer-2 rollups**, and **zero-knowledge proofs (ZKPs)** for enhanced throughput and privacy. This design should help your crypto project seamlessly handle high transaction volumes while maintaining security and decentralization.
 
 ```plaintext
 my-crypto-project/
@@ -82,12 +81,3 @@ my-crypto-project/
    - By combining **sharding** and **Layer-2** rollups with **ZKP** technology, your project can grow without compromising on security or decentralization.  
    - The design is modular, making it easy to swap out or upgrade components (e.g., changing the consensus mechanism).
 
----
-
-### Why This Structure is 10/10
-- **Future-Proof**: It accommodates current and upcoming technologies (ZKPs, rollups, sharding).  
-- **Ease of Maintenance**: Clear separation of concerns lets your team scale codebases and add new features smoothly.  
-- **Security & Reliability**: Monitoring, testing, and robust cryptography practices are integral.  
-- **Extensibility**: New submodules (e.g., novel consensus algorithms, advanced L2 features) can be added with minimal friction.  
-
-Feel free to customize this structure to suit specific needs (e.g., rename directories, add specialized modules). With this foundation, your crypto project will be primed for **high scalability**, **innovative features**, and a **strong developer experience**.
