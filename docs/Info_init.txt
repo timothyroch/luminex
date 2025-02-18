@@ -56,7 +56,7 @@ my-crypto-project/
     └── api_reference.md        # Endpoint documentation, expected payloads, etc.
 ```
 
-## Highlights of this 10/10 Structure
+## Highlights of this Structure
 
 1. **Adaptive Multi-Layer (AML) Approach**  
    - **Sharding** (`blockchain/sharding/`) to split the network into smaller, more manageable parts for parallel processing.  
