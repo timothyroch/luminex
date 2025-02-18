@@ -1,5 +1,4 @@
 
-```plaintext
 my-crypto-project/
 ├── blockchain/
 │   ├── consensus/              # Consensus mechanisms (e.g., PoS, PoW, PoA, hybrid, etc.)
