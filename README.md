@@ -1,6 +1,6 @@
 # My Crypto Project
 
-My Crypto Project is a next-generation blockchain platform engineered to handle high transaction volumes without sacrificing security or decentralization. By leveraging an **Adaptive Multi-Layer (AML) approach**, our project integrates cutting-edge technologies like sharding, layer-2 rollups, and zero-knowledge proofs (ZKPs) to deliver exceptional scalability, throughput, and privacy.
+My Crypto Project is a basic blockchain platform engineered to handle high transaction volumes without sacrificing security or decentralization. By leveraging an **Adaptive Multi-Layer (AML) approach**, our project integrates cutting-edge technologies like sharding, layer-2 rollups, and zero-knowledge proofs (ZKPs) to deliver exceptional scalability, throughput, and privacy.
 
 ## Project Overview
 
