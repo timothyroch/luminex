@@ -22,8 +22,6 @@ At its core, My Crypto Project is designed to be modular, flexible, and future-p
 - **API Layer**: 
   - Provides standardized endpoints for transaction processing, block exploration, health monitoring, and administrative controls.
 
-- **User Interface (UI)**: 
-  - Offers dedicated interfaces for wallet management, block exploration, and administrative tasks, ensuring a smooth and user-friendly experience.
 
 - **Testing, Monitoring, and Documentation**: 
   - Comprehensive tests (unit, integration, performance) ensure reliability.
